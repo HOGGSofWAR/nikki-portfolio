@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/styles/blocks/_header.scss"],"names":[],"mappings":"AAEI;EACI","file":"dist/css/style.css","sourcesContent":[".header {\n\n    &__title {\n        color: blue;\n    }\n}"],"sourceRoot":""}
