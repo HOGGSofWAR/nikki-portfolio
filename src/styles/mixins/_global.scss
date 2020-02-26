@@ -1,0 +1,22 @@
+@mixin map-styles($styles) {
+	@each $style, $value in $styles {
+		#{$style}: #{$value};
+	}
+}
+
+@mixin pseudo($loc: before) {
+	@if ($loc == before) {
+		&::before {
+			content: '';
+			display: block;
+			@content;
+		}
+	}
+	@if ($loc == after) {
+		&::after {
+			content: '';
+			display: block;
+			@content;
+		}
+	}
+}

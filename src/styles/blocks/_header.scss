@@ -1,6 +1,37 @@
 .header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    padding-top: 30%;
+
+    @include r(tablet) {
+        padding-top: 50%;
+    }
+    
+    &__container {
+        @include container(desktop);
+        background-color: $green;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 
     &__title {
-        color: blue;
+        @include typography(h1);
+
+    }
+
+    &__svg {
+        width: 30%;
+        margin: 0 auto;
+
+        svg {
+            width: 10vw;
+            height: 7vw;
+        }
     }
 }

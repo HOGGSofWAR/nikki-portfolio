@@ -1,2 +1,1 @@
-# homestead-template
 # nikki-portfolio

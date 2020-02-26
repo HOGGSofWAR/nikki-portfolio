@@ -1,0 +1,7 @@
+
+// Typography
+
+// Headers
+@include create-typography(h1, $robot, $f-regular, 40px, 48px, 0.01em, $white, (), (
+  font-size: fluid-type($mobile-min, $tablet-max, 20px, 40px)
+));

@@ -1,0 +1,25 @@
+// Breakpoints
+$mobile-min: 320px;
+$mobile-max: 599px;
+$tablet-min: $mobile-max + 1;
+$tablet-max: 1023px;
+$desktop-min: $tablet-max + 1;
+$desktop-max: 1919px;
+$ultrawide-min: $desktop-max + 1;
+$ultrawide-max: null;
+
+// Breakpoint Edge Cases
+$small-desktop-min: $desktop-min;
+$small-desktop-max: 1499px;
+$big-desktop-min: $small-desktop-max + 1;
+$big-desktop-max: 1919px;
+
+// Responsive
+@include create-breakpoint(ultrawide, $ultrawide-min, null);
+@include create-breakpoint(desktop, $desktop-min, $desktop-max);
+@include create-breakpoint(tablet, $tablet-min, $tablet-max);
+@include create-breakpoint(mobile, null, $mobile-max);
+
+// Responsive edge cases
+@include create-breakpoint(big-desktop, $big-desktop-min, $big-desktop-max);
+@include create-breakpoint(small-desktop, $small-desktop-min, $small-desktop-max);

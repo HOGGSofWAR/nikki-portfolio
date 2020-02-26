@@ -1,1 +1,36 @@
-@import "./blocks/header";
+// Globals
+@import "functions";
+@import "vars";
+@import "mixins";
+@import "config";
+@import "global";
+@import "fonts";
+@import "utils";
+
+// Blocks
+@import "blocks";
+
+
+
+.dev {
+  &--on {
+    @include container();
+    height: calc(100% + 2px);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 9999;
+    top: -1px;
+    bottom: -1px;
+
+    &:before {
+      content: "";
+      background-color: rgba($green, 0.1);
+      border: 1px solid $green;
+      width: 100%;
+      display:block;
+      height:100%;
+    }
+  }
+}
