@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    <?php include './php/blocks/header.php'; ?>
+    <?php 
+    include './php/blocks/header.php'; 
+    include './php/blocks/content_boxes.php';
+    ?>
 
     <script src="/dist/js/main.js"></script>
 </body>
