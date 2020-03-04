@@ -19,3 +19,9 @@
 ), (
   font-size: fluid-type($mobile-min, $tablet-max, 20px, 40px)
 ));
+
+@include create-typography(h4, $roboto, $f-regular, 20px, 30px, 0.01em, $f-dark, (
+  text-transform: uppercase
+), (
+  font-size: fluid-type($mobile-min, $tablet-max, 16px, 18px)
+));

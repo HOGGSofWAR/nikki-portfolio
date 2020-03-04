@@ -133,10 +133,37 @@ function updateEyePosition(event) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header/header */ "./src/scripts/header/header.js");
-/* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_header_header__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nav_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nav/nav */ "./src/scripts/nav/nav.js");
+/* harmony import */ var _nav_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_nav_nav__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header/header */ "./src/scripts/header/header.js");
+/* harmony import */ var _header_header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_header_header__WEBPACK_IMPORTED_MODULE_1__);
 alert('Hello World!');
 
+
+
+/***/ }),
+
+/***/ "./src/scripts/nav/nav.js":
+/*!********************************!*\
+  !*** ./src/scripts/nav/nav.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var list = document.getElementsByClassName('nav__container')[0];
+var indicator = document.getElementsByClassName('nav__indicator')[0];
+list.addEventListener('mouseover', function (e) {
+  indicator.style.opacity = 1;
+
+  if (e.target.tagName === "A") {
+    var props = e.target.getBoundingClientRect();
+    indicator.style.width = props.width + "px";
+    indicator.style.left = props.left + "px";
+  }
+});
+list.addEventListener('mouseout', function (e) {
+  indicator.style.opacity = 0;
+});
 
 /***/ }),
 
