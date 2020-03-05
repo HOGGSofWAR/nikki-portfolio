@@ -10,8 +10,9 @@
 
 <body>
     <?php 
+    include './php/blocks/button.php';
     include './php/blocks/nav.php'; 
-    include './php/blocks/header.php'; 
+    include './php/blocks/header.php';
     include './php/blocks/content_boxes.php';
     ?>
 

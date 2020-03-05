@@ -918,6 +918,116 @@ body.compensate-for-scrollbar {
   height: 7vw;
 }
 
+.button-container {
+  background-color: grey;
+  padding: 40px;
+}
+
+.button {
+  margin: 0 auto;
+  border: 2px solid #fcd5cf;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: roboto, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-transform: uppercase;
+  outline: none;
+  display: block;
+  position: relative;
+  transition: transform 0.8s ease;
+  transition: all 0.3s;
+  background: transparent;
+  color: #fff;
+}
+@media screen and (max-width: 599px) {
+  .button {
+    font-size: calc( 40Px + (20 * ((100vw - 1023Px) / 703)) );
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .button {
+    font-size: calc( 40Px + (20 * ((100vw - 1023Px) / 703)) );
+  }
+}
+.button::before {
+  content: "";
+  position: absolute;
+  border-top: 2px solid #f6eaec;
+  border-bottom: 2px solid #f6eaec;
+  top: -2px;
+  left: -20px;
+  right: 0;
+  bottom: -2px;
+  width: 100%;
+  padding: 2px 20px;
+  transition: transform 0.8s ease;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  border-left: 2px solid #f6eaec;
+  border-right: 2px solid #f6eaec;
+  top: -20px;
+  left: -2px;
+  right: 0;
+  bottom: -20px;
+  width: 100%;
+  padding: 20px 0;
+  transition: transform 0.8s ease;
+}
+.button:hover {
+  background-color: rgba(100, 0, 0, 0.4);
+  transition: all 0.3s;
+}
+.button:hover .button__horizontal {
+  transition: transform 0.8s ease;
+  transform: scaleY(0);
+}
+.button:hover::before {
+  transition: transform 0.8s ease;
+  transform: scaleX(0);
+}
+.button:hover .button__vertical {
+  transition: transform 0.8s ease;
+  transform: scaleX(0);
+}
+.button:hover::after {
+  transition: transform 0.8s ease;
+  transform: scaleY(0);
+}
+.button__horizontal {
+  border-left: 2px solid #f6eaec;
+  border-right: 2px solid #f6eaec;
+  height: 100%;
+  width: 100%;
+  padding: 2px 20px;
+  position: absolute;
+  top: -2px;
+  left: -22px;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: transform 0.8s ease;
+}
+.button__vertical {
+  border-top: 2px solid #f6eaec;
+  border-bottom: 2px solid #f6eaec;
+  height: 100%;
+  width: 100%;
+  padding: 20px 2px;
+  position: absolute;
+  top: -22px;
+  left: -2px;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: transform 0.8s ease;
+}
+
 .content-boxes {
   padding: 0 10%;
 }
